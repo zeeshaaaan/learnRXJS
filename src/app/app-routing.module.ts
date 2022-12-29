@@ -1,7 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FromEventComponent } from './observable/from-event/from-event.component';
+import { IntervalComponent } from './observable/interval/interval.component';
+import { ListComponent } from './observable/list/list.component';
+import { ObservableComponent } from './observable/observable.component';
+import { PromiseComponent } from './promise/promise.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path:'promise', component:PromiseComponent},
+  {path:'observable', component:ObservableComponent, children:[
+    {path:'', component:ListComponent},
+    {path:'fromEvent', component:FromEventComponent},
+    {path:'interval', component:IntervalComponent}
+  ]},
+  {path:'**' , component:ObservableComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
