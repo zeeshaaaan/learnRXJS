@@ -1,0 +1,45 @@
+<div class="m-3">
+    <h2>Retry,RetryWhen,Scan and Delay</h2>
+    <br>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table table-hover" *ngIf="person != null">
+                <tr>
+                    <th>ID</th>
+                    <td>{{person.id}}</td>
+                </tr>
+                <hr>
+                <tr>
+                    <th>Name</th>
+                    <td>{{person.name}}</td>
+                </tr>
+                <hr>
+                <tr>
+                    <th>Email</th>
+                    <td>{{person.email}}</td>
+                </tr>
+                <hr>
+                <tr>
+                    <th>Phone</th>
+                    <td>{{person.phone}}</td>
+                </tr>
+                <hr>
+                <tr>
+                    <th>Website</th>
+                    <td>{{person.website}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <button class="btn btn-primary" (click)="fetchDetails()" type="button" >
+        <span *ngIf="fetching" class="spinner-border spinner-border-sm" role="status" 
+        aria-hidden="true"></span>
+        {{fetching ? 'Fetching' : 'Fetch Details'}}
+      </button>
+      <br><br>
+      <p>
+        Status: <strong [ngClass]="{'text-success':status=='Data Fetched', 'text-danger':status=='Problem in fetching Data'}">{{status}}</strong>
+      </p>
+</div>
