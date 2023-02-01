@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AsyncSubjectComponent } from './observable/async-subject/async-subject.component';
 import { CustomComponent } from './observable/custom/custom.component';
 import { DebounceComponent } from './observable/debounce/debounce.component';
 import { FilterComponent } from './observable/filter/filter.component';
@@ -10,6 +11,7 @@ import { MapComponent } from './observable/map/map.component';
 import { ObservableComponent } from './observable/observable.component';
 import { OfFromComponent } from './observable/of-from/of-from.component';
 import { PluckComponent } from './observable/pluck/pluck.component';
+import { ReplaySubjectComponent } from './observable/replay-subject/replay-subject.component';
 import { RetryComponent } from './observable/retry/retry.component';
 import { SubjectComponent } from './observable/subject/subject.component';
 import { TakeComponent } from './observable/take/take.component';
@@ -34,6 +36,8 @@ const routes: Routes = [
     {path:'retry', component:RetryComponent},
     {path:'debounce', component:DebounceComponent},
     {path:'subject', component:SubjectComponent},
+    {path:'replaySubject', component:ReplaySubjectComponent},
+    {path:'asyncSubject', component:AsyncSubjectComponent},
   ]},
   {path:'**' , component:ObservableComponent}
 ];
