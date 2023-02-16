@@ -19,6 +19,8 @@ import { PluckComponent } from './observable/pluck/pluck.component';
 import { ReplaySubjectComponent } from './observable/replay-subject/replay-subject.component';
 import { RetryComponent } from './observable/retry/retry.component';
 import { SubjectComponent } from './observable/subject/subject.component';
+import { SwitchMapSearchComponent } from './observable/switch-map-search/switch-map-search.component';
+import { SwitchMapComponent } from './observable/switch-map/switch-map.component';
 import { TakeComponent } from './observable/take/take.component';
 import { TapComponent } from './observable/tap/tap.component';
 import { ToArrayComponent } from './observable/to-array/to-array.component';
@@ -48,6 +50,8 @@ const routes: Routes = [
     {path:'mergemap', component:MergeMapComponent},
     {path:'concatmap', component:ConcatmapComponent},
     {path:'concatmap2', component:Concatmap2Component},
+    {path:'switchmap', component:SwitchMapComponent},
+    {path:'switchmapSearch', component:SwitchMapSearchComponent},
   ]},
   {path:'**' , component:ObservableComponent}
 ];

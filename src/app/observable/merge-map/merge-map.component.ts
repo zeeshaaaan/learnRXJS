@@ -52,8 +52,8 @@ export class MergeMapComponent implements OnInit {
 
 
 
-  getdata(data:any){  //Getting data and return as observable
-    return of(data + ' Video Uploaded')
-  }
+    getdata(data:any){  //Getting data and return as observable
+      return of(data + ' Video Uploaded')
+    }
 
 }
